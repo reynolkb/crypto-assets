@@ -5,3 +5,7 @@ This is a basic component for crypto assets that you can borrow. Currently it is
 ## Run dev environment
 
 You can run `npm run dev`
+
+## Screenshot
+
+![screenshot](./screenshot.png)
