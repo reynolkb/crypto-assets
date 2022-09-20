@@ -6,13 +6,6 @@ const assetMobileHeaders = ['Asset', 'Available'];
 
 const assets = [
   {
-    name: 'Bitcoin',
-    symbol: 'BTC',
-    available: '5',
-    apyV: '< 0.01%',
-    apyS: '5.46%',
-  },
-  {
     name: 'Ethereum',
     symbol: 'ETH',
     available: '100',
@@ -20,11 +13,11 @@ const assets = [
     apyS: '5.15%',
   },
   {
-    name: 'Cardano',
-    symbol: 'ADA',
-    available: '1,000',
+    name: 'DAI',
+    symbol: 'DAI',
+    available: '10,000',
     apyV: '< 0.01%',
-    apyS: '5.32%',
+    apyS: '5.07%',
   },
   {
     name: 'USDC',
@@ -53,13 +46,13 @@ export const Assets: React.FC<AssetProps> = ({ isSm, isMd }) => {
       {isSm ? (
         <>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', pt: 3, pb: 2, pl: 4, pr: 4, alignItems: 'center' }}>
-            <Typography variant="h5">Assets to borrow</Typography>
+            <Typography variant="h5">Assets to supply</Typography>
           </Box>
         </>
       ) : (
         <>
           <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', pt: 3, pb: 2, pl: 4, pr: 4, alignItems: 'center' }}>
-            <Typography variant="h5">Assets to borrow</Typography>
+            <Typography variant="h5">Assets to supply</Typography>
           </Box>
         </>
       )}

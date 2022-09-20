@@ -1,11 +1,11 @@
 import { Box, Typography, Grid, Button } from '@mui/material';
 import Image from 'next/image';
-import ADA from '../../images/assets/ADA.svg';
-import BTC from '../../images/assets/BTC.svg';
 import ETH from '../../images/assets/ETH.svg';
+import DAI from '../../images/assets/DAI.svg';
 import USDC from '../../images/assets/USDC.svg';
 import USDT from '../../images/assets/USDT.svg';
 import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
+import { SupplyModal } from './SupplyModal';
 
 export interface CryptoAssetProps {
   name: string;
@@ -23,12 +23,11 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
       <Box sx={{ pl: 3, pr: 3 }}>
         {isSm ? (
           <>
-            <Grid container>
+            <Grid container alignItems="center" justifyContent="center">
               <Grid item xs={6}>
                 <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                  {symbol === 'ADA' && <Image src={ADA} alt="ADA" />}
-                  {symbol === 'BTC' && <Image src={BTC} alt="BTC" />}
                   {symbol === 'ETH' && <Image src={ETH} alt="ETH" />}
+                  {symbol === 'DAI' && <Image src={DAI} alt="DAI" />}
                   {symbol === 'USDC' && <Image src={USDC} alt="USDC" />}
                   {symbol === 'USDT' && <Image src={USDT} alt="USDT" />}
                   {!isSm && (
@@ -54,18 +53,14 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
           </>
         ) : isMd ? (
           <>
-            <Grid container>
+            <Grid container alignItems="center" justifyContent="center">
               <Grid item xs={6}>
                 <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                  {symbol === 'ADA' && <Image src={ADA} alt="ADA" />}
-                  {symbol === 'BTC' && <Image src={BTC} alt="BTC" />}
                   {symbol === 'ETH' && <Image src={ETH} alt="ETH" />}
+                  {symbol === 'DAI' && <Image src={DAI} alt="DAI" />}
                   {symbol === 'USDC' && <Image src={USDC} alt="USDC" />}
                   {symbol === 'USDT' && <Image src={USDT} alt="USDT" />}
                   <Box sx={{ ml: 1, display: 'flex', flexDirection: 'column' }}>
-                    <Typography variant="body1" fontWeight={700}>
-                      {name}
-                    </Typography>
                     <Typography variant="body2">{symbol}</Typography>
                   </Box>
                 </Box>
@@ -83,18 +78,14 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
           </>
         ) : (
           <>
-            <Grid container>
+            <Grid container alignItems="center" justifyContent="center">
               <Grid item xs={3}>
                 <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                  {symbol === 'ADA' && <Image src={ADA} alt="ADA" />}
-                  {symbol === 'BTC' && <Image src={BTC} alt="BTC" />}
                   {symbol === 'ETH' && <Image src={ETH} alt="ETH" />}
+                  {symbol === 'DAI' && <Image src={DAI} alt="DAI" />}
                   {symbol === 'USDC' && <Image src={USDC} alt="USDC" />}
                   {symbol === 'USDT' && <Image src={USDT} alt="USDT" />}
                   <Box sx={{ ml: 1, display: 'flex', flexDirection: 'column' }}>
-                    <Typography variant="body1" fontWeight={700}>
-                      {name}
-                    </Typography>
                     <Typography variant="body2">{symbol}</Typography>
                   </Box>
                 </Box>
@@ -114,9 +105,7 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
               <Grid item xs={3}>
                 <Box sx={{ display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'space-between' }}>
                   <Typography variant="body2">{apyS}</Typography>
-                  <Button type="button" fullWidth variant="contained" sx={{ height: '50px', width: '125px', borderRadius: '5px', ml: 1 }}>
-                    Borrow
-                  </Button>
+                  <SupplyModal symbol={symbol} />
                 </Box>
               </Grid>
             </Grid>

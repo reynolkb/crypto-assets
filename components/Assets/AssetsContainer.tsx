@@ -28,6 +28,11 @@ const theme = createTheme({
   // },
   typography: {
     fontFamily: ['Arial'].join(','),
+    body2: {
+      '@media (max-width:475px)': {
+        fontSize: '12px',
+      },
+    },
     body3: {
       color: '#62677B',
       fontSize: '14px',

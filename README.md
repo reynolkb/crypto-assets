@@ -1,6 +1,6 @@
 ## Getting Started
 
-This is a basic component for crypto assets that you can borrow. Currently it is setup for mock data, but the idea is that it will read different liquidity pools and you can borrow based on your current loan to value.
+This is a basic component for crypto assets that you can supply to a lending protocol. Currently it is setup for mock data, but the idea is that it will read the assets from your wallet and you can supply them as collateral to the lending protocol.
 
 ## Run dev environment
 
