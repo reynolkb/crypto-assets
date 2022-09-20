@@ -8,4 +8,5 @@ You can run `npm run dev`
 
 ## Screenshot
 
-![screenshot](./screenshot.png)
+![screenshot](./screenshot1.png)
+![screenshot](./screenshot2.png)
