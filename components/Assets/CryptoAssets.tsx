@@ -46,7 +46,7 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
                     <Typography variant="body2">{available}</Typography>
                     <Typography variant="body2">{apyV}</Typography>
                   </Box>
-                  <CallMissedOutgoingIcon sx={{ ml: 1 }}></CallMissedOutgoingIcon>
+                  <SupplyModal symbol={symbol} apyV={apyV} isSm={isSm} isMd={isMd} />
                 </Box>
               </Grid>
             </Grid>
@@ -71,7 +71,7 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
                     <Typography variant="body2">{available}</Typography>
                     <Typography variant="body2">{apyV}</Typography>
                   </Box>
-                  <CallMissedOutgoingIcon></CallMissedOutgoingIcon>
+                  <SupplyModal symbol={symbol} apyV={apyV} isSm={isSm} isMd={isMd} />
                 </Box>
               </Grid>
             </Grid>
@@ -105,7 +105,7 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
               <Grid item xs={3}>
                 <Box sx={{ display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'space-between' }}>
                   <Typography variant="body2">{apyS}</Typography>
-                  <SupplyModal symbol={symbol} apyV={apyV} />
+                  <SupplyModal symbol={symbol} apyV={apyV} isSm={isSm} isMd={isMd} />
                 </Box>
               </Grid>
             </Grid>
