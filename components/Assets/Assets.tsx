@@ -73,7 +73,7 @@ export const Assets: React.FC<AssetProps> = ({ isSm, isMd }) => {
           </Grid>
         </Box>
         {Array.from(assets).map((asset, index) => (
-          <CryptoAsset key={index} name={asset.name} symbol={asset.symbol} available={asset.available} apyV={asset.apyV} apyS={asset.apyS} isSm={isSm} isMd={isMd} />
+          <CryptoAsset key={index} {...asset} isSm={isSm} isMd={isMd} />
         ))}
         <Box sx={{ mt: 2 }}></Box>
       </Box>
