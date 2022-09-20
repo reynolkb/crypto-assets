@@ -105,7 +105,7 @@ export const CryptoAsset: React.FC<CryptoAssetProps> = ({ name, symbol, availabl
               <Grid item xs={3}>
                 <Box sx={{ display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'space-between' }}>
                   <Typography variant="body2">{apyS}</Typography>
-                  <SupplyModal symbol={symbol} />
+                  <SupplyModal symbol={symbol} apyV={apyV} />
                 </Box>
               </Grid>
             </Grid>
