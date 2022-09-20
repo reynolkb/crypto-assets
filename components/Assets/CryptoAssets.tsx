@@ -1,5 +1,4 @@
-import { Box, Typography, Grid, IconButton, Button } from '@mui/material';
-import Outbound from '@mui/icons-material/Outbound';
+import { Box, Typography, Grid, Button } from '@mui/material';
 import Image from 'next/image';
 import ADA from '../../images/assets/ADA.svg';
 import BTC from '../../images/assets/BTC.svg';

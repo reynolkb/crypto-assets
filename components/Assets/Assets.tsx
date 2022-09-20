@@ -1,6 +1,4 @@
-import { Box, Typography, Button, Paper, FormControl, InputLabel, Select, MenuItem, SelectChangeEvent, Grid, styled, IconButton } from '@mui/material';
-import { useState } from 'react';
-import Outbound from '@mui/icons-material/Outbound';
+import { Box, Typography, Paper, Grid } from '@mui/material';
 import { CryptoAsset } from './CryptoAssets';
 
 const assetHeaders = ['Asset', 'Available', 'APY, variable', 'APY, stable'];

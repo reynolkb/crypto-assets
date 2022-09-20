@@ -1,5 +1,4 @@
-import { Box, createTheme, ThemeProvider, Typography, useMediaQuery } from '@mui/material';
-import { useEffect } from 'react';
+import { Box, createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import { Assets } from './Assets';
 
 declare module '@mui/material/styles' {
